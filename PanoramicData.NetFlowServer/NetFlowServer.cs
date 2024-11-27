@@ -301,7 +301,7 @@ public partial class NetFlowServer(
 				Unused = unused
 			};
 
-			syslogApplication.NetflowRecordReceived(this, netflowV5Record);
+			syslogApplication.NetFlowRecordReceived(this, netflowV5Record);
 
 			offset += 48; // Each record is 48 bytes
 		}
