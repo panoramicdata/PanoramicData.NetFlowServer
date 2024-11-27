@@ -11,7 +11,7 @@ internal class ExampleNetFlowApplication(
 {
 	private readonly ExampleNetFlowApplicationConfiguration _config = options.Value;
 
-	public void NetflowRecordReceived(object sender, NetflowV5Record record)
+	public void NetflowRecordReceived(object sender, NetFlowV5Record record)
 		=> logger.LogInformation(
 			"NetFlow message received: {Record}",
 			record.ToString()

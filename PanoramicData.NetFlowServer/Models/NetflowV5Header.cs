@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace PanoramicData.NetFlowServer.Models;
-public class NetflowV5Header
+public class NetFlowV5Header
 {
 	public int ClientUptimeMilliseconds { get; internal set; }
 	public DateTimeOffset DateTimeOffset { get; internal set; }

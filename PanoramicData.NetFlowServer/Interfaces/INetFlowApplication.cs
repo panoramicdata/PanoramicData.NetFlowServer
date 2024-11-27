@@ -4,5 +4,5 @@ namespace PanoramicData.NetFlowServer.Interfaces;
 
 public interface INetFlowApplication
 {
-	void NetflowRecordReceived(object sender, NetflowV5Record message);
+	void NetflowRecordReceived(object sender, NetFlowV5Record message);
 }

@@ -3,10 +3,10 @@ using System.Net;
 
 namespace PanoramicData.NetFlowServer.Models;
 
-public class NetflowV5Record
+public class NetFlowV5Record
 {
 	public required IPAddress ClientIp { get; init; }
-	public required NetflowV5Header Header { get; init; }
+	public required NetFlowV5Header Header { get; init; }
 	public required DateTimeOffset DateTimeOffset { get; init; }
 	public required IPAddress SourceIp { get; init; }
 	public required IPAddress DestinationIp { get; init; }

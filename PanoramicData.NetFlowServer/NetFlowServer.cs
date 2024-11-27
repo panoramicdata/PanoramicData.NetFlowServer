@@ -192,7 +192,7 @@ public partial class NetFlowServer(
 		var samplingInterval = samplingModeAndInterval & 0x3FFF;
 
 		// Create a header object
-		var header = new NetflowV5Header
+		var header = new NetFlowV5Header
 		{
 			ClientUptimeMilliseconds = clientUptimeMilliseconds,
 			DateTimeOffset = dateTime,
@@ -274,7 +274,7 @@ public partial class NetFlowServer(
 			// 2 bytes: Unused
 			var unused = (data[offset + 46] << 8) | data[offset + 47];
 
-			var netflowV5Record = new NetflowV5Record
+			var netflowV5Record = new NetFlowV5Record
 			{
 				ClientIp = udpReceiveResult.RemoteEndPoint.Address,
 				Header = header,
