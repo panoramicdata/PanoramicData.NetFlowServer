@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoramicData.NetFlowServer", "PanoramicData.NetFlowServer\PanoramicData.NetFlowServer.csproj", "{3D4BF411-4A19-4BB5-A4ED-A125BF2C2B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp", "ExampleApp\ExampleApp.csproj", "{AF794062-8F7B-460A-94D4-47E12A522A25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{59854309-1242-4DCB-8B89-BEE875DF5C69}"
+	ProjectSection(SolutionItems) = preProject
+		.editorConfig = .editorConfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE.md = LICENSE.md
+		PanoramicData.NetFlowServer.dic = PanoramicData.NetFlowServer.dic
+		README.md = README.md
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{4D84FC92-CD80-4FCA-959E-87A748515E48}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\Send-UdpDatagram.ps1 = Tools\Send-UdpDatagram.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D4BF411-4A19-4BB5-A4ED-A125BF2C2B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4BF411-4A19-4BB5-A4ED-A125BF2C2B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4BF411-4A19-4BB5-A4ED-A125BF2C2B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4BF411-4A19-4BB5-A4ED-A125BF2C2B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF794062-8F7B-460A-94D4-47E12A522A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF794062-8F7B-460A-94D4-47E12A522A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF794062-8F7B-460A-94D4-47E12A522A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF794062-8F7B-460A-94D4-47E12A522A25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D84FC92-CD80-4FCA-959E-87A748515E48} = {59854309-1242-4DCB-8B89-BEE875DF5C69}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50553CF9-2A53-4792-AC0D-FFCAD59CA6D3}
+	EndGlobalSection
+EndGlobal
