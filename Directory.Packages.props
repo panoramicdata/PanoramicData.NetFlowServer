@@ -1,0 +1,23 @@
+<Project>
+
+	<PropertyGroup>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageVersion Include="Elastic.Serilog.Sinks" Version="8.12.3" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.5" />
+		<PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.5" />
+		<PackageVersion Include="Nerdbank.GitVersioning" Version="3.6.146" />
+		<PackageVersion Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+		<PackageVersion Include="Serilog.Settings.Configuration" Version="8.0.4" />
+		<PackageVersion Include="Serilog.Sinks.Console" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>

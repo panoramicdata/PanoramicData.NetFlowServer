@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorConfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="global.json" />
+    <File Path="LICENSE.md" />
+    <File Path="PanoramicData.NetFlowServer.dic" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+  <Folder Name="/Solution Items/Tools/">
+    <File Path="Tools/Send-UdpDatagram.ps1" />
+  </Folder>
+  <Project Path="ExampleApp/ExampleApp.csproj" />
+  <Project Path="PanoramicData.NetFlowServer/PanoramicData.NetFlowServer.csproj" />
+</Solution>
