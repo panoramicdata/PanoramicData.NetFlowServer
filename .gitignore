@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /ExampleApp/appsettings.json
+nuget-key.txt

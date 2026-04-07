@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Panoramic Data NetFlow Server
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/735072bef30049279f73514724f325a2)](https://app.codacy.com/gh/panoramicdata/PanoramicData.NetFlowServer/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)

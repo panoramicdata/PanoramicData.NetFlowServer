@@ -12,6 +12,12 @@ using System.Threading.Tasks;
 
 namespace PanoramicData.NetFlowServer;
 
+/// <summary>
+/// A hosted service that listens for and processes NetFlow v5 UDP packets.
+/// </summary>
+/// <param name="options">The NetFlow server configuration options.</param>
+/// <param name="loggerFactory">The logger factory.</param>
+/// <param name="syslogApplication">The application that handles received NetFlow records.</param>
 public partial class NetFlowServer(
 	IOptions<NetFlowServerConfiguration> options,
 	ILoggerFactory loggerFactory,
@@ -24,10 +30,14 @@ public partial class NetFlowServer(
 	private bool _disposedValue;
 	private Task? _udpListenerTask;
 
+	/// <summary>
+	/// Gets the unique identifier for this server instance.
+	/// </summary>
 	public Guid Id { get; } = Guid.NewGuid();
 
 	private readonly NetFlowServerConfiguration _config = (options ?? throw new ArgumentNullException(nameof(options))).Value;
 
+	/// <inheritdoc/>
 	public Task StartAsync(CancellationToken cancellationToken)
 	{
 		if (_started)
@@ -60,6 +70,7 @@ public partial class NetFlowServer(
 		return Task.CompletedTask;
 	}
 
+	/// <inheritdoc/>
 	public Task StopAsync(CancellationToken cancellationToken)
 	{
 		lock (_lock)
@@ -307,6 +318,10 @@ public partial class NetFlowServer(
 		}
 	}
 
+	/// <summary>
+	/// Releases the unmanaged resources and optionally releases the managed resources.
+	/// </summary>
+	/// <param name="disposing"><see langword="true"/> to release both managed and unmanaged resources.</param>
 	protected virtual void Dispose(bool disposing)
 	{
 		if (!_disposedValue)
@@ -320,6 +335,7 @@ public partial class NetFlowServer(
 		}
 	}
 
+	/// <inheritdoc/>
 	public void Dispose()
 	{
 		// Do not change this code. Put clean-up code in 'Dispose(bool disposing)' method

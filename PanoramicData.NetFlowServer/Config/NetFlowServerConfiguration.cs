@@ -1,5 +1,8 @@
 ﻿namespace PanoramicData.NetFlowServer.Config;
 
+/// <summary>
+/// Configuration options for the NetFlow server.
+/// </summary>
 public class NetFlowServerConfiguration
 {
 	/// <summary>
