@@ -13,6 +13,9 @@
     <IncludeSymbols>True</IncludeSymbols>
     <PackageIcon>Panoramic Data.png</PackageIcon>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>PanoramicData.NetFlowServer</PackageId>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <NeutralResourcesLanguage>en</NeutralResourcesLanguage>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">
