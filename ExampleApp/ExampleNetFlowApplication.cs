@@ -7,7 +7,7 @@ namespace ExampleApp;
 
 internal class ExampleNetFlowApplication(
 	IOptions<ExampleNetFlowApplicationConfiguration> options,
-	ILogger<Program> logger) : INetFlowApplication
+	ILogger<ExampleNetFlowApplication> logger) : INetFlowApplication
 {
 	private readonly ExampleNetFlowApplicationConfiguration _config = options.Value;
 

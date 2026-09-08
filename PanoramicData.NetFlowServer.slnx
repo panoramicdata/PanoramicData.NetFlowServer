@@ -21,4 +21,5 @@
   </Folder>
   <Project Path="ExampleApp/ExampleApp.csproj" />
   <Project Path="PanoramicData.NetFlowServer/PanoramicData.NetFlowServer.csproj" />
+  <Project Path="PanoramicData.NetFlowServer.Test/PanoramicData.NetFlowServer.Test.csproj" />
 </Solution>

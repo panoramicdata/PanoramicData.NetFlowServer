@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace ExampleApp;
 
-partial class Program
+static class Program
 {
 	static async Task Main()
 	{
-		var cancellationTokenSource = new CancellationTokenSource();
+		using var cancellationTokenSource = new CancellationTokenSource();
 		await Host.CreateDefaultBuilder()
 			.ConfigureServices((hostBuilderContext, serviceCollection) =>
 			{
