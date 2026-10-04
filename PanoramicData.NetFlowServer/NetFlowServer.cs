@@ -86,24 +86,25 @@ public class NetFlowServer(
 	}
 
 	/// <inheritdoc/>
-	public Task StopAsync(CancellationToken cancellationToken)
+	public async Task StopAsync(CancellationToken cancellationToken)
 	{
+		Task? listenerTask;
 		lock (_lock)
 		{
 			if (!_started)
 			{
-				return Task.CompletedTask;
+				return;
 			}
 
 			_cancellationTokenSource.Cancel();
-
-			_udpListenerTask?.Wait(cancellationToken);
-
+			listenerTask = _udpListenerTask;
 			_started = false;
-
 		}
 
-		return Task.CompletedTask;
+		if (listenerTask is not null)
+		{
+			await listenerTask.WaitAsync(cancellationToken);
+		}
 	}
 
 	private async Task UdpListenerLoopAsync(int udpServerPort, CancellationToken cancellationToken)
@@ -132,6 +133,7 @@ public class NetFlowServer(
 			}
 		}
 	}
+
 	private Task ProcessNetFlowMessageAsync(UdpReceiveResult udpReceiveResult)
 	{
 		try
