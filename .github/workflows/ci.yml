@@ -77,11 +77,13 @@ jobs:
     # than through `dotnet test`. On Linux the executable has no .exe extension.
     # coverage.config ports coverlet's generated-code exclusions so figures stay
     # comparable across the estate.
+    # The settings path must be absolute: the test host resolves a relative path from
+    # its own working directory and rejects it as "doesn't exist or is invalid".
     - name: Run tests with coverage
       run: >-
         ./PanoramicData.NetFlowServer.Test/bin/Debug/net10.0/PanoramicData.NetFlowServer.Test
         --coverage
-        --coverage-settings coverage.config
+        --coverage-settings "$GITHUB_WORKSPACE/coverage.config"
         --coverage-output-format cobertura
         --coverage-output coverage.cobertura.xml
 
