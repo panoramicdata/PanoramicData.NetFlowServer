@@ -106,11 +106,11 @@ internal sealed class NetFlowV5PacketBuilder
 /// </summary>
 internal sealed class NetFlowV5RecordValues
 {
-	public IPAddress SourceIp { get; init; } = IPAddress.Parse("10.0.0.1");
+	public IPAddress SourceIp { get; init; } = TestAddresses.DefaultSource;
 
-	public IPAddress DestinationIp { get; init; } = IPAddress.Parse("10.0.0.2");
+	public IPAddress DestinationIp { get; init; } = TestAddresses.DefaultDestination;
 
-	public IPAddress NextHopIp { get; init; } = IPAddress.Parse("10.0.0.254");
+	public IPAddress NextHopIp { get; init; } = TestAddresses.DefaultNextHop;
 
 	public int InputInterfaceIndex { get; init; }
 
