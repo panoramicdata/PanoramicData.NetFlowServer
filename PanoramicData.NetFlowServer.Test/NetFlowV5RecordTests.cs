@@ -1,5 +1,3 @@
-using System.Net;
-
 namespace PanoramicData.NetFlowServer.Test;
 
 /// <summary>
@@ -12,12 +10,12 @@ public class NetFlowV5RecordTests
 	{
 		var record = new NetFlowV5Record
 		{
-			ClientIp = IPAddress.Parse("10.1.1.1"),
+			ClientIp = TestAddresses.Client,
 			Header = new NetFlowV5Header(),
 			DateTimeOffset = new DateTimeOffset(2025, 1, 2, 3, 4, 5, 678, TimeSpan.Zero),
-			SourceIp = IPAddress.Parse("192.168.1.10"),
-			DestinationIp = IPAddress.Parse("8.8.8.8"),
-			NextHopIp = IPAddress.Parse("192.168.1.1"),
+			SourceIp = TestAddresses.Source,
+			DestinationIp = TestAddresses.Destination,
+			NextHopIp = TestAddresses.NextHop,
 			InputInterfaceIndex = 1,
 			OutputInterfaceIndex = 2,
 			PacketCount = 17,
@@ -38,6 +36,6 @@ public class NetFlowV5RecordTests
 		};
 
 		record.ToString().Should()
-			.Be("2025-01-02 03:04:05.678 10.1.1.1 192.168.1.10:51234 -> 8.8.8.8:443 6 17 packets 4096 bytes");
+			.Be("2025-01-02 03:04:05.678 203.0.113.1 192.0.2.10:51234 -> 198.51.100.8:443 6 17 packets 4096 bytes");
 	}
 }

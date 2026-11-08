@@ -148,9 +148,9 @@ public class NetFlowServerTests
 		var packet = new NetFlowV5PacketBuilder()
 			.AddRecord(new NetFlowV5RecordValues
 			{
-				SourceIp = IPAddress.Parse("192.168.1.10"),
-				DestinationIp = IPAddress.Parse("8.8.8.8"),
-				NextHopIp = IPAddress.Parse("192.168.1.1"),
+				SourceIp = TestAddresses.Source,
+				DestinationIp = TestAddresses.Destination,
+				NextHopIp = TestAddresses.NextHop,
 				InputInterfaceIndex = 3,
 				OutputInterfaceIndex = 4,
 				PacketCount = 17,
@@ -173,9 +173,9 @@ public class NetFlowServerTests
 
 		var record = await SendAndReceiveSingleRecordAsync(packet);
 
-		record.SourceIp.Should().Be(IPAddress.Parse("192.168.1.10"));
-		record.DestinationIp.Should().Be(IPAddress.Parse("8.8.8.8"));
-		record.NextHopIp.Should().Be(IPAddress.Parse("192.168.1.1"));
+		record.SourceIp.Should().Be(TestAddresses.Source);
+		record.DestinationIp.Should().Be(TestAddresses.Destination);
+		record.NextHopIp.Should().Be(TestAddresses.NextHop);
 		record.InputInterfaceIndex.Should().Be(3);
 		record.OutputInterfaceIndex.Should().Be(4);
 		record.PacketCount.Should().Be(17);
