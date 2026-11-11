@@ -81,7 +81,7 @@ jobs:
     # its own working directory and rejects it as "doesn't exist or is invalid".
     - name: Run tests with coverage
       run: >-
-        ./PanoramicData.NetFlowServer.Test/bin/Debug/net10.0/PanoramicData.NetFlowServer.Test
+        ./PanoramicData.NetFlowServer.Test/bin/Debug/net11.0/PanoramicData.NetFlowServer.Test
         --coverage
         --coverage-settings "$GITHUB_WORKSPACE/coverage.config"
         --coverage-output-format cobertura
@@ -110,7 +110,7 @@ jobs:
       uses: codacy/codacy-coverage-reporter-action@89d6c85cfafaec52c72b6c5e8b2878d33104c699
       with:
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        coverage-reports: PanoramicData.NetFlowServer.Test/bin/Debug/net10.0/TestResults/coverage.cobertura.xml
+        coverage-reports: PanoramicData.NetFlowServer.Test/bin/Debug/net11.0/TestResults/coverage.cobertura.xml
 
     - name: Upload coverage artifact
       if: always()
@@ -118,7 +118,7 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: coverage
-        path: PanoramicData.NetFlowServer.Test/bin/Debug/net10.0/TestResults/coverage.cobertura.xml
+        path: PanoramicData.NetFlowServer.Test/bin/Debug/net11.0/TestResults/coverage.cobertura.xml
         retention-days: 7
 
   publish:
